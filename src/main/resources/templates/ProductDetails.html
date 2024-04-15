@@ -24,11 +24,11 @@
                 <!-- Example: -->
                 <div class="container-fluid">
                     <h1>Product Details</h1>
-                    <form th:action="@{/employeesbydept}" method="get">
+                    <form th:action="@{/products-by-category}" method="get">
                         <label for="departmentSelect">Select Category:</label>
-                        <select id="departmentSelect" name="departmentId">
+                        <select id="departmentSelect" name="categoryId">
                             <option th:each="category : ${categories}" th:value="${category.id}"
-                                    th:text="${category.deptName}">Department Name
+                                    th:text="${category.catName}">
                             </option>
                         </select>
                         <button type="submit" class="btn btn-info col-3"> Show Product</button>

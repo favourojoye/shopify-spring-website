@@ -10,7 +10,7 @@ public interface ProductService {
 
     List<Product> getAllProduct();
 
-    List<Product> getProductsByCategory(Long departmentId);
+    List<Product> getProductsByCategory(Long categoryId);
 
     Product getProductById(long id);
 

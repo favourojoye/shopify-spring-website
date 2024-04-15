@@ -47,7 +47,6 @@
                         </thead>
                         <!--        <div th:insert="fragments/employeeRecords"></div>-->
                         <tbody>
-                        <!--/*thymesVar id="products" type="java.util.List<com.spaddemplbydeptCRUD.Model.Product>"*/-->
                         <tr th:each="product : ${products}">
                             <td th:text="${product.id}">ID</td>
                             <td th:text="${product.size}">Size</td>
@@ -59,7 +58,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <a th:href = "@{/showNewProductForm}" class="btn btn-primary btn-sm mb-3 "> Add Product </a>
+                    <a th:href = "@{/add-product}" class="btn btn-primary btn-sm mb-3 "> Add Product </a>
                     <div>
                         <form th:action="@{/logout}" method="post">
 

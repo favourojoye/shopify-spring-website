@@ -35,7 +35,7 @@ public class MainController {
     }
 
     @GetMapping("/")
-    public String viewHomePAge(Model model) {
+    public String viewHomePage(Model model) {
         return "index";
     }
 
@@ -57,40 +57,39 @@ public class MainController {
         return "product-details";
     }
 
-    @GetMapping("/showNewProductForm")
-    public String showNewProductForm(Model model) {
+    @GetMapping("/add-product")
+    public String getAddProductPage(Model model) {
         Product product = new Product();
         model.addAttribute("product", product);
         List<Category> categories = categoryService.getAllCategory();
         model.addAttribute("categories", categories);
-        return "add_Product";
+        return "add-product";
     }
 
-    @PostMapping("/addProduct")
-    public String addEmployee(@ModelAttribute("product") Product product) {
+    @PostMapping("/add-product")
+    public String getAddProductPage(@ModelAttribute("product") Product product) {
         productService.addProduct(product);
         return "redirect:/products";
     }
 
     @GetMapping("/deleteProduct/{id}")
     public String addProduct(@PathVariable(value = "id") long id, Model model) {
-        Product product = productService.getProductById(id);
         productService.deleteProductById(id);
         return "redirect:/products";
     }
 
 
-    @GetMapping("/showFormForUpdate/{id}")
-    public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
+    @GetMapping("/products-update/{id}")
+    public String getProductUpdatePage(@PathVariable(value = "id") long id, Model model) {
         Product product = productService.getProductById(id);
         model.addAttribute("product", product);
-        return "update_product";
+        return "update-product";
     }
 
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
         model.addAttribute("user", new User());
-        return "signup_form";
+        return "signup-form";
     }
 
     @PostMapping("/process_register")
@@ -100,7 +99,7 @@ public class MainController {
         user.setPassword(encodedPassword);
 
         userRepo.save(user);
-        return "register_success";
+        return "register-success";
     }
 
 }

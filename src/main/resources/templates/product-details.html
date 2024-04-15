@@ -53,7 +53,7 @@
                             <td th:text="${product.size}">Size</td>
                             <td th:text="${product.color}">Color</td>
                             <td th:text="${product.price}">Price</td>
-                            <td> <a th:href="@{/showFormForUpdate/{id}(id=${product.id})}" class="btn btn-primary">Update</a>
+                            <td> <a th:href="@{/products-update/{id}(id=${product.id})}" class="btn btn-primary">Update</a>
                                 <a th:href="@{/deleteProduct/{id}(id=${product.id})}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>

@@ -1,0 +1,53 @@
+.nav-link {
+    margin-right: 20px; /* Adjust the value as needed */
+}
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo img {
+    width: 50%;
+    height: auto;
+
+}
+/*.navbar-nav{*/
+/*    width:80%;*/
+/*}*/
+
+
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Style the landing page header */
+.text-center {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style the links within the aside */
+.container-text-left a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333; /* Adjust color as needed */
+    height:100%
+}
+.full-container{
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.col-md-9{
+    height: 70vh;
+}

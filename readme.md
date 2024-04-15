@@ -4,7 +4,7 @@
 - Set up the database in assets/shopify-database.sql
 - Open the spring application in IntelliJ
 - Run the web application
-- In a browser open  <localhost:9090>
+- In a browser open  <http://localhost:9090>
 - To login use the following login in details
 
 | Username              | Password |

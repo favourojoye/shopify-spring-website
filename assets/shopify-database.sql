@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2024 at 07:17 PM
+-- Generation Time: Apr 15, 2024 at 07:25 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -31,14 +31,14 @@ USE `shopify`;
 
 CREATE TABLE `category` (
   `id` bigint(20) NOT NULL,
-  `cat_name` varchar(255) DEFAULT NULL
+  `name` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `category`
 --
 
-INSERT INTO `category` (`id`, `cat_name`) VALUES
+INSERT INTO `category` (`id`, `name`) VALUES
 (1, 'men'),
 (2, 'women');
 

@@ -9,7 +9,7 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String catName;
+    private String name;
 
     @OneToMany(mappedBy = "category")
     private List<Product> products;
@@ -23,12 +23,12 @@ public class Category {
         this.id = id;
     }
 
-    public String getCatName() {
-        return catName;
+    public String getName() {
+        return name;
     }
 
-    public void setCatName(String catName) {
-        this.catName = catName;
+    public void setName(String catName) {
+        this.name = catName;
     }
 
     public List<Product> getProducts() {

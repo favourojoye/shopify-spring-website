@@ -28,7 +28,7 @@
                         <label for="departmentSelect">Select Category:</label>
                         <select id="departmentSelect" name="categoryId">
                             <option th:each="category : ${categories}" th:value="${category.id}"
-                                    th:text="${category.catName}">
+                                    th:text="${category.name}">
                             </option>
                         </select>
                         <button type="submit" class="btn btn-info col-3"> Show Product</button>

@@ -1,10 +1,10 @@
-package com.spaddemplbydeptCRUD;
+package io.github.favourojoye.shopify;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpAddEmplByDeptApplicationTests {
+class ApplicationTests {
 
     @Test
     void contextLoads() {

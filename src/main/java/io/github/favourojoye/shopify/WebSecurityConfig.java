@@ -1,7 +1,7 @@
-package com.spaddemplbydeptCRUD;
+package io.github.favourojoye.shopify;
 
 
-import com.spaddemplbydeptCRUD.Service.CustomUserDetailsService;
+import io.github.favourojoye.shopify.services.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;

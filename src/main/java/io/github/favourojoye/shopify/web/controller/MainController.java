@@ -1,12 +1,12 @@
-package com.spaddemplbydeptCRUD.web.controller;
+package io.github.favourojoye.shopify.web.controller;
 
 
-import com.spaddemplbydeptCRUD.Model.Category;
-import com.spaddemplbydeptCRUD.Model.Product;
-import com.spaddemplbydeptCRUD.Model.User;
-import com.spaddemplbydeptCRUD.Repository.UserRepository;
-import com.spaddemplbydeptCRUD.Service.CategoryService;
-import com.spaddemplbydeptCRUD.Service.ProductService;
+import io.github.favourojoye.shopify.model.Category;
+import io.github.favourojoye.shopify.model.Product;
+import io.github.favourojoye.shopify.model.User;
+import io.github.favourojoye.shopify.repositories.UserRepository;
+import io.github.favourojoye.shopify.services.CategoryService;
+import io.github.favourojoye.shopify.services.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,7 +54,7 @@ public class MainController {
         model.addAttribute("products", products);
         model.addAttribute("categories", categoryService.getAllCategory());
 
-        return "ProductDetails";
+        return "product-details";
     }
 
     @GetMapping("/showNewProductForm")

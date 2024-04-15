@@ -1,7 +1,7 @@
-package com.spaddemplbydeptCRUD.Service;
+package io.github.favourojoye.shopify.services;
 
 
-import com.spaddemplbydeptCRUD.Model.User;
+import io.github.favourojoye.shopify.model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

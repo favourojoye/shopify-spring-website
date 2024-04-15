@@ -1,8 +1,8 @@
-package com.spaddemplbydeptCRUD.Service;
+package io.github.favourojoye.shopify.services;
 
 
-import com.spaddemplbydeptCRUD.Model.User;
-import com.spaddemplbydeptCRUD.Repository.UserRepository;
+import io.github.favourojoye.shopify.model.User;
+import io.github.favourojoye.shopify.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

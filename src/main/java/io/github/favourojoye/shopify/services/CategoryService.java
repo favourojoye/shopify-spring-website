@@ -1,7 +1,7 @@
-package com.spaddemplbydeptCRUD.Service;
+package io.github.favourojoye.shopify.services;
 
-import com.spaddemplbydeptCRUD.Model.Category;
-import com.spaddemplbydeptCRUD.Repository.CategoryRepository;
+import io.github.favourojoye.shopify.model.Category;
+import io.github.favourojoye.shopify.repositories.CategoryRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

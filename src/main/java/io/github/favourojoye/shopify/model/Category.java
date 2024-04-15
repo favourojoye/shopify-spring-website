@@ -1,4 +1,4 @@
-package com.spaddemplbydeptCRUD.Model;
+package io.github.favourojoye.shopify.model;
 
 import jakarta.persistence.*;
 

@@ -1,6 +1,6 @@
-package com.spaddemplbydeptCRUD.Repository;
+package io.github.favourojoye.shopify.repositories;
 
-import com.spaddemplbydeptCRUD.Model.User;
+import io.github.favourojoye.shopify.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

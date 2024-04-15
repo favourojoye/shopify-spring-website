@@ -1,4 +1,4 @@
-package com.spaddemplbydeptCRUD;
+package io.github.favourojoye.shopify;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

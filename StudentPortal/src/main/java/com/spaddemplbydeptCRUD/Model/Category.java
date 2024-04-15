@@ -31,7 +31,7 @@ public class Category {
         this.catName = catName;
     }
 
-    public List<Product> getProduct() {
+    public List<Product> getProducts() {
         return products;
     }
 

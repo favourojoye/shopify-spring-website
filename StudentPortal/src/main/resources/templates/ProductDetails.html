@@ -47,11 +47,12 @@
                         </thead>
                         <!--        <div th:insert="fragments/employeeRecords"></div>-->
                         <tbody>
+                        <!--/*thymesVar id="products" type="java.util.List<com.spaddemplbydeptCRUD.Model.Product>"*/-->
                         <tr th:each="product : ${products}">
                             <td th:text="${product.id}">ID</td>
-                            <td th:text="${product.Size}">Size</td>
-                            <td th:text="${product.Color}">Color</td>
-                            <td th:text="${product.Price}">Price</td>
+                            <td th:text="${product.size}">Size</td>
+                            <td th:text="${product.color}">Color</td>
+                            <td th:text="${product.price}">Price</td>
                             <td> <a th:href="@{/showFormForUpdate/{id}(id=${product.id})}" class="btn btn-primary">Update</a>
                                 <a th:href="@{/deleteProduct/{id}(id=${product.id})}" class="btn btn-danger">Delete</a>
                             </td>

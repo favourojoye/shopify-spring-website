@@ -10,12 +10,13 @@ public interface ProductService {
 
     List<Product> getAllProduct();
 
-    List<Product> getProductByCategory(Long departmentId);
-Product getProductById(long id);
+    List<Product> getProductsByCategory(Long departmentId);
+
+    Product getProductById(long id);
+
     void addProduct(Product product);
 
-    void deleteProducteById(long id);
-
+    void deleteProductById(long id);
 
 
 }

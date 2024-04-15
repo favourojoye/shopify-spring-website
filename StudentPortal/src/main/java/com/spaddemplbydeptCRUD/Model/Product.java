@@ -11,12 +11,12 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String Size;
-    private String Color;
-    private String Price;
+    private String size;
+    private String color;
+    private String price;
 
     @ManyToOne
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "category")
     private Category category;
 
 
@@ -30,34 +30,34 @@ public class Product {
     }
 
     public String getSize() {
-        return Size;
+        return size;
     }
 
-    public void setSize(String Size) {
-        this.Size = Size;
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public String getColor() {
-        return Color;
+        return color;
     }
 
-    public void setColor(String lastName) {
-        this.Color = Color;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public String getPrize() {
-        return Price;
+    public String getPrice() {
+        return price;
     }
 
-    public void setPrice(String Price) {
-        this.Price = Price;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
-    public Category getDepartment() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setDepartment(Category category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 

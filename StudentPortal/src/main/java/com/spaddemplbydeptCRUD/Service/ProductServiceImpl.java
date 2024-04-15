@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-abstract class ProductServiceImpl implements ProductService
+public class ProductServiceImpl implements ProductService
 {
     @Autowired
     private final ProductRepository productRepository;
@@ -29,10 +29,10 @@ abstract class ProductServiceImpl implements ProductService
     }
 
     @Override
-    public List<Product> getProductByCategory(Long categoryId) {
+    public List<Product> getProductsByCategory(Long categoryId) {
         Category category = categoryRepository.findById(categoryId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid category id: " + categoryId));
-        return category.getProduct();
+        return category.getProducts();
     }
     @Override
     public void addProduct(Product product) {

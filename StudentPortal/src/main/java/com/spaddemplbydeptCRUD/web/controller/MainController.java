@@ -1,4 +1,4 @@
-package com.spaddemplbydeptCRUD.Controller;
+package com.spaddemplbydeptCRUD.web.controller;
 
 
 import com.spaddemplbydeptCRUD.Model.Category;
@@ -7,6 +7,7 @@ import com.spaddemplbydeptCRUD.Model.User;
 import com.spaddemplbydeptCRUD.Repository.UserRepository;
 import com.spaddemplbydeptCRUD.Service.CategoryService;
 import com.spaddemplbydeptCRUD.Service.ProductService;
+import com.spaddemplbydeptCRUD.Service.ProductServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class MainController {
     private UserRepository userRepo;
 
     @Autowired
-    public MainController(ProductService productService, CategoryService categoryService) {
+    public MainController(ProductServiceImpl productService, CategoryService categoryService) {
         this.categoryService = categoryService;
         this.productService = productService;
     }
@@ -42,12 +43,13 @@ public class MainController {
     @GetMapping("/allProduct")
     public String viewProductDetails(Model model) {
         model.addAttribute("category", categoryService.getAllCategory());
+        model.addAttribute("products", productService.getAllProduct());
         return "ProductDetails";
     }
 
     @GetMapping("/productbydept")
     public String getProductByCategory(@RequestParam("categoryId") Long departmentId, Model model) {
-        List<Product> products = productService.getProductByCategory(departmentId); // Use EmployeeService
+        List<Product> products = productService.getProductsByCategory(departmentId); // Use EmployeeService
         List<Category> categories = categoryService.getAllCategory(); // Fetch departments from service
         model.addAttribute("product", products);
         model.addAttribute("categories", categories);
@@ -72,7 +74,7 @@ public class MainController {
         Product product = new Product();
         model.addAttribute("product", product);
         List<Category> categories = categoryService.getAllCategory();
-        model.addAttribute("departments", categories);
+        model.addAttribute("categories", categories);
         return "add_Product";
     }
 
@@ -85,7 +87,7 @@ public class MainController {
     @GetMapping("/deleteProduct/{id}")
     public String addProduct(@PathVariable(value = "id") long id, Model model) {
         Product product = productService.getProductById(id);
-        productService.deleteProducteById(id);
+        productService.deleteProductById(id);
         return "redirect:/allemployees";
     }
 

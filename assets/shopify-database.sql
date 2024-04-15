@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2024 at 06:20 PM
+-- Generation Time: Apr 15, 2024 at 07:17 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -104,9 +104,7 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `color`, `price`, `size`, `category`) VALUES
-(2, 'blue', '10', 'medium', 1),
-(3, 'green', '3', 'small', 1),
-(4, 'green', '3', 'small', 1),
+(3, 'green', '4', 'small', 1),
 (5, 'green', '3', 'small', 1),
 (6, 'green', '35', 'small', 1),
 (7, 'green', '35', 'small', 2);
@@ -130,7 +128,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `first_name`, `last_name`, `password`) VALUES
-(2, 'favourojoye18@gmail.com', 'Favour', 'Ojoye', '$2a$10$MfjIcoalLwwqh36vpL/ruO/qhx1/Dvz50Dm.jPv93RMYpV1VU5OVO');
+(2, 'admin@fake-domain.com', 'Favour', 'Ojoye', '$2a$10$MfjIcoalLwwqh36vpL/ruO/qhx1/Dvz50Dm.jPv93RMYpV1VU5OVO');
 
 --
 -- Indexes for dumped tables

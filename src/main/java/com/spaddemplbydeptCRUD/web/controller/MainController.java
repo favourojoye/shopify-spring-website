@@ -41,33 +41,22 @@ public class MainController {
     }
 
     @GetMapping("/products")
-    public String viewProductDetails(Model model) {
-        model.addAttribute("category", categoryService.getAllCategory());
-        model.addAttribute("products", productService.getAllProduct());
-        return "ProductDetails";
+    public String getProducts(Model model) {
+        return getProductsPage(model, productService.getAllProduct());
     }
 
-    @GetMapping("/productbydept")
-    public String getProductByCategory(@RequestParam("categoryId") Long departmentId, Model model) {
-        List<Product> products = productService.getProductsByCategory(departmentId); // Use EmployeeService
-        List<Category> categories = categoryService.getAllCategory(); // Fetch departments from service
-        model.addAttribute("product", products);
-        model.addAttribute("categories", categories);
-        // Log employee and department details
-        logger.info("Product: {}", products);
-        logger.info("Category: {}", model.getAttribute("category"));
-        return "ProductDetails";
+
+    @GetMapping("/products-by-category")
+    public String getProductByCategory(@RequestParam("categoryId") Long categoryId, Model model) {
+        return getProductsPage(model, productService.getProductsByCategory(categoryId));
     }
 
-//    @GetMapping("/employees")
-//    public ModelAndView getEmployeesByDepartment(@RequestParam("departmentId") Long departmentId) {
-//        ModelAndView modelAndView = new ModelAndView("employeeDetails");
-//        List<Employee> employees = employeeService.getEmployeesByDepartment(departmentId);
-//        List<Department> departments = departmentService.getAllDepartments(); // Fetch departments from repository
-//        modelAndView.addObject("employees", employees);
-//        modelAndView.addObject("departments", departments); // Add departments to the model
-//        return modelAndView;
-//    }
+    private String getProductsPage(Model model, List<Product> products) {
+        model.addAttribute("products", products);
+        model.addAttribute("categories", categoryService.getAllCategory());
+
+        return "ProductDetails";
+    }
 
     @GetMapping("/showNewProductForm")
     public String showNewProductForm(Model model) {

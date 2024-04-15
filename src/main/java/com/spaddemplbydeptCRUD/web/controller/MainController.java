@@ -7,7 +7,6 @@ import com.spaddemplbydeptCRUD.Model.User;
 import com.spaddemplbydeptCRUD.Repository.UserRepository;
 import com.spaddemplbydeptCRUD.Service.CategoryService;
 import com.spaddemplbydeptCRUD.Service.ProductService;
-import com.spaddemplbydeptCRUD.Service.ProductServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +29,7 @@ public class MainController {
     private UserRepository userRepo;
 
     @Autowired
-    public MainController(ProductServiceImpl productService, CategoryService categoryService) {
+    public MainController(ProductService productService, CategoryService categoryService) {
         this.categoryService = categoryService;
         this.productService = productService;
     }

@@ -40,12 +40,12 @@ public class WebSecurityConfig {
         http.authenticationProvider(authenticationProvider());
 
         http.authorizeHttpRequests(auth ->
-                        auth.requestMatchers("/allproduct").authenticated()
+                        auth.requestMatchers("/products").authenticated()
                                 .anyRequest().permitAll()
                 )
                 .formLogin(login ->
                         login.usernameParameter("email")
-                                .defaultSuccessUrl("/allproduct")
+                                .defaultSuccessUrl("/products")
                                 .permitAll()
                 )
                 .logout(logout -> logout.logoutSuccessUrl("/").permitAll()

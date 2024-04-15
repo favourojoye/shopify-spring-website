@@ -40,7 +40,7 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/allProduct")
+    @GetMapping("/products")
     public String viewProductDetails(Model model) {
         model.addAttribute("category", categoryService.getAllCategory());
         model.addAttribute("products", productService.getAllProduct());
@@ -81,14 +81,14 @@ public class MainController {
     @PostMapping("/addProduct")
     public String addEmployee(@ModelAttribute("product") Product product) {
         productService.addProduct(product);
-        return "redirect:/allproduct";
+        return "redirect:/products";
     }
 
     @GetMapping("/deleteProduct/{id}")
     public String addProduct(@PathVariable(value = "id") long id, Model model) {
         Product product = productService.getProductById(id);
         productService.deleteProductById(id);
-        return "redirect:/allemployees";
+        return "redirect:/products";
     }
 
 

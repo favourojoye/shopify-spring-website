@@ -24,7 +24,7 @@
                 <!-- Example: -->
                 <div class="container-fluid">
                     <h1>Product Details</h1>
-                    <form th:action="@{/addProduct}" th:object="${product}" method="post">
+                    <form th:action="@{/add-product}" th:object="${product}" method="post">
                         <label for="categorySelect">Select category:</label>
                         <select id="categorySelect" name="categoryId" th:field="*{category}">
                             <option th:each="category : ${categories}" th:value="${category.id}"

@@ -24,22 +24,22 @@
                 <!-- Example: -->
                 <div class="container-fluid">
                     <h1>Product Details</h1>
-                    <form action="#" th:action="@{/addProduct}" th:object="${Product}" method="POST">
+                    <form action="#" th:action="@{/add-product}" th:object="${product}" method="POST">
                         <!--    <input type="text" th:field="*{id}" disabled class="form-control mb-4 col-4"/>-->
-                        <input type="hidden" th:field="*{Category}">
-                        <input type="text" th:field="*{ID}"
+                        <input type="hidden" th:field="*{category}">
+                        <input type="text" th:field="*{id}"
                                placeholder="Product Category" class="form-control mb-4 col-4">
-                        <input type="text" th:field="*{Size}"
+                        <input type="text" th:field="*{size}"
                                placeholder="Product Size" class="form-control mb-4 col-4">
-                        <input type="text" th:field="*{Color}"
+                        <input type="text" th:field="*{color}"
                                placeholder="Product Color" class="form-control mb-4 col-4">
-                        <input type="text" th:field="*{Price}"
+                        <input type="text" th:field="*{price}"
                                placeholder="Product Price" class="form-control mb-4 col-4">
                         <button type="submit" class="btn btn-info col-2">Update Product</button>
 
                     </form>
                     <hr>
-                    <a th:href="@{/static}">Back to Employee List</a>
+                    <a th:href="@{/products}">Back to Products List</a>
                 </div>
             </main>
         </div>

@@ -1,26 +1,29 @@
 package io.github.favourojoye.shopify.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Customer {
     //attributes
     //getter/setter
-    private String firstName;
+    private String firstname;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String lastname;
     private String email;
 
-    public Customer(String firstName, Long id, String lastname, String email) {
-        this.firstName = firstName;
-        this.id = id;
-        this.lastname = lastname;
-        this.email = email;
+
+
+    public String getFirstname() {
+        return firstname;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstName) {
+        this.firstname = firstName;
     }
 
     public Long getId() {

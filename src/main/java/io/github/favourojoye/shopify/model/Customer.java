@@ -5,13 +5,13 @@ public class Customer {
     //getter/setter
     private String firstName;
     private Long id;
-    private String Lastname;
+    private String lastname;
     private String email;
 
     public Customer(String firstName, Long id, String lastname, String email) {
         this.firstName = firstName;
         this.id = id;
-        Lastname = lastname;
+        this.lastname = lastname;
         this.email = email;
     }
 
@@ -32,11 +32,11 @@ public class Customer {
     }
 
     public String getLastname() {
-        return Lastname;
+        return lastname;
     }
 
     public void setLastname(String lastname) {
-        Lastname = lastname;
+        this.lastname = lastname;
     }
 
     public String getEmail() {

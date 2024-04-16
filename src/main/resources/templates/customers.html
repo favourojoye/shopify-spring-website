@@ -36,7 +36,7 @@
                         <tbody>
                         <tr th:each="customer : ${customers}">
                             <td th:text="${customer.id}">ID</td>
-                            <td th:text="${customer.firstName}">Size</td>
+                            <td th:text="${customer.firstname}">Size</td>
                             <td th:text="${customer.lastname}">Color</td>
                             <td th:text="${customer.email}">Price</td>
                             <td> <a th:href="@{/customers-update/{id}(id=${customer.id})}" class="btn btn-primary">Update</a>
